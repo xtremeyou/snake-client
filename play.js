@@ -12,7 +12,7 @@ const setupInput = () => {
   return stdin; // return the stdin object so we can use it elsewhere in the program
 };
 
-const handleUserInput = () => {
+const handleUserInput = (key) => {
   if (key === "\u0003") {
     process.exit();
   }
