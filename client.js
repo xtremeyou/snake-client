@@ -14,9 +14,9 @@ const connect = () => {
     conn.write("Name: LOL");
   });
 
-  //   conn.on("connect", () => {
-  //     conn.write("Move: up");
-  //   });
+    // conn.on("connect", () => {
+    //   conn.write("Move: up");
+    // });
 
   //turns data into readable txt
   conn.setEncoding("utf-8");
