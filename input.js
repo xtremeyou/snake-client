@@ -2,7 +2,8 @@ let connection; //used as a global variable so that both functions can use it
 //
 
 //is an input module, thats used for play.js
-const setupInput = (conn) => { //passes conn variable to use in play.js
+const setupInput = (conn) => {
+  //passes conn variable to use in play.js
   connection = conn;
   const stdin = process.stdin; // create variable to hold the stdin object
   //so we don't have to type process.stdin multiple times
@@ -33,7 +34,7 @@ const handleUserInput = (key) => {
   }
 
   if (key === "i") {
-    connection.write("Say: Can't catch me!")
+    connection.write("Say: Can't catch me!");
   }
 
   if (key === "\u0003") {

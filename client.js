@@ -1,8 +1,9 @@
+const { IP, PORT } = require("./constants");
 const net = require("net");
 const connect = () => {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
   //once connection is estlablished sends string saying connected!
   conn.on("connect", () => {
