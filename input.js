@@ -1,6 +1,5 @@
-const { UP, DOWN, LEFT, RIGHT} = require("./constants")
+const { UP, DOWN, LEFT, RIGHT } = require("./constants");
 let connection; //used as a global variable so that both functions can use it
-//
 
 //is an input module, thats used for play.js
 const setupInput = (conn) => {
@@ -17,9 +16,9 @@ const setupInput = (conn) => {
 };
 
 //connection.write uses the variable connect at the top of the page
-//connection is also passed into the function call on the play.js page allow us to use
-//the con object which is placed into the input function above.
-//this allows us to send controls to the server so we cna move the snek
+//connection is also passed into the function call on the play.js page, which allows us to use
+//the con object which is then placed into the input function above.
+//this allows us to send controls to the server so we can move the snek!
 const handleUserInput = (key) => {
   if (key === "w") {
     connection.write(UP);
