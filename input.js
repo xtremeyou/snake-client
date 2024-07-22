@@ -1,3 +1,4 @@
+const { UP, DOWN, LEFT, RIGHT} = require("./constants")
 let connection; //used as a global variable so that both functions can use it
 //
 
@@ -21,19 +22,19 @@ const setupInput = (conn) => {
 //this allows us to send controls to the server so we cna move the snek
 const handleUserInput = (key) => {
   if (key === "w") {
-    connection.write("Move: up");
+    connection.write(UP);
   }
 
   if (key === "s") {
-    connection.write("Move: down");
+    connection.write(DOWN);
   }
 
   if (key === "a") {
-    connection.write("Move: left");
+    connection.write(LEFT);
   }
 
   if (key === "d") {
-    connection.write("Move: right");
+    connection.write(RIGHT);
   }
 
   if (key === "i") {
